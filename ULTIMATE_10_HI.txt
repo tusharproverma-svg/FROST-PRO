@@ -1,0 +1,12 @@
+FROST v36 — दस अपग्रेड लक्ष्य
+1. Emotion intelligence: tone-aware response design; no real emotion model included.
+2. Long-term memory: tiny browser-local message history only, not cloud/device-wide memory.
+3. Action engine: checklist/planning only; no arbitrary device actions.
+4. Real-time voice AI: optional browser speech input; no continuous live voice model.
+5. Vision AI: image preview only; no image understanding model.
+6. Advanced brain: real AI model/API still needs to be connected.
+7. Proactive AI: user-controlled local suggestion preference; no background autonomous agent.
+8. Dynamic personality: Friendly/Concise/Teacher preference saved locally.
+9. Technology stack: HTML/CSS/JavaScript + Python demo; Java/C#/C++ are starter scaffolds.
+10. Phased development: backup, implement in copy, test, security review, release.
+Device note: 4 GB RAM means a large local AI model may be slow. Start with lightweight UI and an online provider if permitted; protect API keys on a backend.

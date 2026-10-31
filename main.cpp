@@ -1,0 +1,1 @@
+// Starter sample only; not connected to FROST UI yet.\n#include <iostream>\nint main(){ std::cout << \"FROST C++ scaffold — integration required.\\n\"; return 0; }\n

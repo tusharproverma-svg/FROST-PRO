@@ -1,0 +1,1 @@
+// Starter sample only; not connected to FROST UI yet.\nusing System;\nnamespace FrostModule { public static class Program { public static string Status() => \"FROST C# scaffold — integration required.\"; public static void Main() => Console.WriteLine(Status()); } }\n
