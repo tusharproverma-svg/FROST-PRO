@@ -1,0 +1,28 @@
+FROST-PRO GitHub Source Pack v34
+=================================
+
+यह पैक GitHub पर FROST-PRO की वेबसाइट/PWA फाइलें अपलोड करने के लिए है।
+
+मुख्य वेबसाइट फाइलें (ZIP के root में):
+- index.html
+- manifest.webmanifest
+- sw.js
+- icon-192.png
+- icon-512.png
+- maskable-512.png
+- README.txt
+
+GitHub पर अपडेट करने का तरीका:
+1. इस ZIP को अपने Android डिवाइस में डाउनलोड करके Extract करें।
+2. GitHub में अपना FROST-PRO repository खोलें।
+3. Add file > Upload files चुनें।
+4. Extract किए गए फ़ोल्डर से ऊपर की 7 मुख्य फाइलें चुनें और अपलोड करें।
+5. Commit changes दबाएँ।
+6. 1–3 मिनट बाद GitHub Pages साइट खोलें। अगर पुराना पेज दिखे तो Chrome में Reload करें या साइट का cache साफ़ करें।
+
+ध्यान दें:
+- यह वेबसाइट/PWA source pack है, Android APK नहीं।
+- ZIP के extras/ में FROST_AI_Full_Project_v1.zip एक अलग Python starter project है।
+- Python starter को GitHub Pages पर सीधे चलाया नहीं जा सकता; वह अलग से Python environment/server मांगता है।
+- यह पैक अपने-आप GitHub पर अपलोड नहीं होता; आपको GitHub में फाइलें चुनकर Upload files और Commit changes करना होगा।
+- किसी भी पुराने source को बदलने से पहले उसका backup रख लें।
