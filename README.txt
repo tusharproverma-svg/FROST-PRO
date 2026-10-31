@@ -1,6 +1,5 @@
-FROST-PRO v36 — Ultimate Roadmap Source Pack
-Main website files: index.html, style.css, app.js, manifest.webmanifest, sw.js.
-Upload these website files to the root of the GitHub Pages repository only after making a backup.
-New: 10-point roadmap dashboard, browser speech-input attempt, image preview, browser-local short message history, personality preference, proactive toggle.
-Limits: These are partial implementations, not ten fully completed AI capabilities. Real AI provider, true vision AI, continuous voice AI, safe action engine, durable synced memory, complete Android Gradle project/APK, and integrated compiled Java/C#/C++ modules are not included.
-Python backend is local demo only. GitHub Pages cannot run Python. Never publish API keys in a public repo.
+FROST-PRO v37 DOT UI SOURCE PACK
+Upload the website files (index.html, style.css, app.js, sw.js, manifest.webmanifest) to the repository root after backup.
+Includes: improved dot-based FROST avatar, Dot Art Studio with PNG download, updated cache name and safer service-worker cache install failure handling.
+Dot Art Studio generates a deterministic decorative dot pattern from entered text; it does NOT semantically generate the named object. For true prompt-to-image generation, connect a legitimate image-generation API through a secure backend.
+This is a web/PWA source pack, not an APK. GitHub Pages serves static files only; it cannot run backend/server.py. If 127.0.0.1 refuses connection, the local Python server is stopped or was killed by Android. Restart server.py and keep it running.

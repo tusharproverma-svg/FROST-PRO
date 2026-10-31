@@ -24,3 +24,10 @@ $('imageInput').onchange=e=>{const f=e.target.files&&e.target.files[0];if(!f)ret
 
 const oldSubmit=$('form').onsubmit;
 $('form').onsubmit=e=>{oldSubmit(e);const text=$('msg').value.trim();if(text){const mem=JSON.parse(localStorage.getItem('frost-memory')||'[]');mem.push(text.slice(0,240));localStorage.setItem('frost-memory',JSON.stringify(mem.slice(-8)))}};
+
+// Decorative FROST dot-face. Avoid external libraries and heavy animation loops.
+const face=$('frostFace'); if(face){for(let i=0;i<81;i++){const d=document.createElement('i');d.style.animationDelay=((i%9)*0.07)+'s';face.append(d)}}
+// Local seeded dot pattern generator; not a semantic AI image generator.
+const canvas=$('dotCanvas'), ctx=canvas?.getContext('2d');
+function drawDotArt(){if(!canvas||!ctx)return;const prompt=($('dotPrompt').value||'FROST').trim();let seed=0;for(const ch of prompt)seed=(seed*31+ch.charCodeAt(0))>>>0;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};const cols=Number($('dotDensity').value)||28, rows=Math.max(12,Math.round(cols*420/640)), cw=canvas.width/cols,ch=canvas.height/rows;ctx.fillStyle='#080d1b';ctx.fillRect(0,0,canvas.width,canvas.height);for(let y=0;y<rows;y++){for(let x=0;x<cols;x++){const r=1.1+rand()*2.2;const hue=175+Math.floor(rand()*75);const bright=rand();if(bright<0.18)continue;ctx.beginPath();ctx.arc((x+.5)*cw,(y+.5)*ch,r,0,Math.PI*2);ctx.fillStyle=`hsla(${hue},90%,${55+Math.floor(bright*30)}%,${.35+bright*.65})`;ctx.fill()}}ctx.fillStyle='#d7e8ff';ctx.font='14px system-ui';ctx.fillText(prompt.slice(0,40),16,canvas.height-16)}
+$('makeDots')?.addEventListener('click',drawDotArt);$('clearDots')?.addEventListener('click',()=>{if(ctx)ctx.clearRect(0,0,canvas.width,canvas.height)});$('saveDots')?.addEventListener('click',()=>{if(!canvas)return;const a=document.createElement('a');a.download='frost-dot-art.png';a.href=canvas.toDataURL('image/png');a.click()});if(canvas)drawDotArt();
