@@ -26,3 +26,8 @@ GitHub पर अपडेट करने का तरीका:
 - Python starter को GitHub Pages पर सीधे चलाया नहीं जा सकता; वह अलग से Python environment/server मांगता है।
 - यह पैक अपने-आप GitHub पर अपलोड नहीं होता; आपको GitHub में फाइलें चुनकर Upload files और Commit changes करना होगा।
 - किसी भी पुराने source को बदलने से पहले उसका backup रख लें।
+
+V42 ADDITIVE NOTE:
+- पहले पूरे पुराने project की backup copy बनाएँ।
+- v42 में केवल additive System Hub जोड़ा गया है; upload से पहले GitHub पर diff देखें और नई branch पर test करें।
+- यह web/PWA source है, APK नहीं।
